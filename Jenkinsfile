@@ -5,14 +5,14 @@ pipeline {
             checkout scm
         }
     }
-    stages("Test App") {
+    stage("Test App") {
         steps{
             sh 'sudo npm install'
             sh 'npm index.js'
         }
     }
 
-    stages("Build Images") {
+    stage("Build Images") {
         steps{
             sh 'npm run build'
         }
