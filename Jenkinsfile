@@ -8,15 +8,10 @@ pipeline {
     }
         stage("Test App") {
             steps{
-                sh 'sudo npm install'
-                 sh 'npm index.js'
+                sh 'npm install'
+                sh 'npm index.js'
         }
     }
-
-        stage("Build Images") {
-            steps{
-                 sh 'npm run build'
-        }
-    }
-    }     
+ 
+}
 }
